@@ -1,4 +1,5 @@
 import java.awt.Color;
+
 /** A library of image processing functions. */
 public class Runigram {
 
@@ -15,7 +16,7 @@ public class Runigram {
 		Color[][] image;
 
 		// Tests the horizontal flipping of an image:
-		image = scaled(tinypic, 3, 5);
+		image = flippedHorizontally(tinypic);
 		System.out.println();
 		print(image);
 		
@@ -108,7 +109,6 @@ public class Runigram {
 		int lum = (int)((0.299 * pixel.getRed()) + (0.587 * pixel.getGreen()) + (0.114 * pixel.getBlue()));
 		return new Color(lum, lum, lum);
 	}
- 
 	
 	/**
 	 * Returns an image which is the grayscaled version of the given image.
